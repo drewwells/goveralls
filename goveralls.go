@@ -149,6 +149,7 @@ func main() {
 
 	params := make(url.Values)
 	params.Set("json", string(b))
+	fmt.Println(string(b))
 	res, err := http.PostForm("https://coveralls.io/api/v1/jobs", params)
 	if err != nil {
 		log.Fatal(err)
